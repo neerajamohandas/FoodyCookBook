@@ -11,7 +11,7 @@ class Food {
     
     var id = ""
     var name = ""
-    var instrictions = ""
+    var instructions = ""
     var thumbImage = ""
     var videoLink = ""
     var recipeLink = ""

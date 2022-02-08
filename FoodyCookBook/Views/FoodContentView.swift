@@ -9,7 +9,14 @@ import UIKit
 
 class FoodContentView: UIView {
 
-
+    //MARK: - Properties
+    
+    @IBOutlet var foodImage: UIImageView!
+    @IBOutlet var lbl_foodName: UILabel!
+    @IBOutlet var txtView_RecipeLink: UITextView!
+    @IBOutlet var btn_watchVideo: UIButton!
+    @IBOutlet var txtView_fullRecipe: UITextView!
+    
     var view_content: UIView!
     
     required override public init(frame: CGRect) {

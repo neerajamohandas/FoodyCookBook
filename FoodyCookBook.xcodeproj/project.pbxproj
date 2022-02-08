@@ -17,6 +17,7 @@
 		186C07AA27B2639500D2EE8D /* FoodContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C07A927B2639500D2EE8D /* FoodContentView.xib */; };
 		186C07B127B2650700D2EE8D /* FoodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B027B2650700D2EE8D /* FoodContentView.swift */; };
 		186C07B327B2652500D2EE8D /* SuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B227B2652500D2EE8D /* SuperView.swift */; };
+		186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B527B274E500D2EE8D /* NetworkService.swift */; };
 		322E8A2B6E326971DC2755C9 /* Pods_FoodyCookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719C2C3C9CAF0DF178D66B08 /* Pods_FoodyCookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		186C07A927B2639500D2EE8D /* FoodContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodContentView.xib; sourceTree = "<group>"; };
 		186C07B027B2650700D2EE8D /* FoodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContentView.swift; sourceTree = "<group>"; };
 		186C07B227B2652500D2EE8D /* SuperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperView.swift; sourceTree = "<group>"; };
+		186C07B527B274E500D2EE8D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		719C2C3C9CAF0DF178D66B08 /* Pods_FoodyCookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836721C60BF6679ED57E643D /* Pods-FoodyCookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.debug.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		B118F46134714969FB121416 /* Pods-FoodyCookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.release.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,10 +82,11 @@
 		186C078E27B23CCF00D2EE8D /* FoodyCookBook */ = {
 			isa = PBXGroup;
 			children = (
-				186C07A627B2450700D2EE8D /* Storyboard */,
-				186C07A527B244E700D2EE8D /* Controllers */,
-				186C07A427B244D400D2EE8D /* Views */,
 				186C07A327B244C900D2EE8D /* Models */,
+				186C07A427B244D400D2EE8D /* Views */,
+				186C07A527B244E700D2EE8D /* Controllers */,
+				186C07B427B274BF00D2EE8D /* Services */,
+				186C07A627B2450700D2EE8D /* Storyboard */,
 				186C078F27B23CCF00D2EE8D /* AppDelegate.swift */,
 				186C079127B23CCF00D2EE8D /* SceneDelegate.swift */,
 				186C079327B23CCF00D2EE8D /* ViewController.swift */,
@@ -125,6 +128,14 @@
 				186C079527B23CCF00D2EE8D /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		186C07B427B274BF00D2EE8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				186C07B527B274E500D2EE8D /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BC7920D03594F036ED737AF3 /* Frameworks */ = {
@@ -239,6 +250,7 @@
 				186C07B127B2650700D2EE8D /* FoodContentView.swift in Sources */,
 				186C079027B23CCF00D2EE8D /* AppDelegate.swift in Sources */,
 				186C079227B23CCF00D2EE8D /* SceneDelegate.swift in Sources */,
+				186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
