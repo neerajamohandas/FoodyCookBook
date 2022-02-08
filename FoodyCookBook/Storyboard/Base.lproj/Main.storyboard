@@ -12,7 +12,7 @@
         <!--Favourites-->
         <scene sceneID="46Y-nL-R1l">
             <objects>
-                <viewController id="bKc-LK-fE9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouriteVC" id="bKc-LK-fE9" customClass="FavouriteVC" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vjM-Ef-gx5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,15 +41,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favourites" image="suit.heart.fill" catalog="system" id="AqX-9P-708"/>
+                    <connections>
+                        <outlet property="tableView_Fav" destination="7rX-Kc-ez5" id="FyW-zJ-GOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQD-lP-ZCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-200"/>
+            <point key="canvasLocation" x="382.60869565217394" y="-200.22321428571428"/>
         </scene>
         <!--Search-->
         <scene sceneID="TuU-BQ-vtZ">
             <objects>
-                <viewController id="qhW-oy-D8Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="qhW-oy-D8Q" customClass="SearchVC" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Af1-KN-rcH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

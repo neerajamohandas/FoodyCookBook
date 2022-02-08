@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
 
-class Food {
+class Food: Object  {
     
-    var id = ""
-    var name = ""
-    var instructions = ""
-    var thumbImage = ""
-    var videoLink = ""
-    var recipeLink = ""
+    @objc dynamic var id = ""
+    @objc dynamic var name = ""
+    @objc dynamic var instructions = ""
+    @objc dynamic var thumbImage = ""
+    @objc dynamic var videoLink = ""
+    @objc dynamic var recipeLink = ""
+    /*
     var ingredient1 = ""
     var ingredient2 = ""
     var ingredient3 = ""
@@ -55,4 +58,5 @@ class Food {
     var measurement18 = ""
     var measurement19 = ""
     var measurement20 = ""
+     */
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		186C079027B23CCF00D2EE8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C078F27B23CCF00D2EE8D /* AppDelegate.swift */; };
 		186C079227B23CCF00D2EE8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C079127B23CCF00D2EE8D /* SceneDelegate.swift */; };
-		186C079427B23CCF00D2EE8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C079327B23CCF00D2EE8D /* ViewController.swift */; };
 		186C079727B23CCF00D2EE8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186C079527B23CCF00D2EE8D /* Main.storyboard */; };
 		186C079927B23CD000D2EE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186C079827B23CD000D2EE8D /* Assets.xcassets */; };
 		186C079C27B23CD000D2EE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186C079A27B23CD000D2EE8D /* LaunchScreen.storyboard */; };
@@ -20,6 +19,9 @@
 		186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B527B274E500D2EE8D /* NetworkService.swift */; };
 		186C07B927B2823B00D2EE8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B827B2823B00D2EE8D /* Constants.swift */; };
 		186C07BD27B2940100D2EE8D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07BC27B2940100D2EE8D /* HomeVC.swift */; };
+		186C07BF27B2B08800D2EE8D /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07BE27B2B08800D2EE8D /* DBService.swift */; };
+		186C07C127B2B82800D2EE8D /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07C027B2B82800D2EE8D /* FavouriteVC.swift */; };
+		186C07C327B2B83900D2EE8D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07C227B2B83900D2EE8D /* SearchVC.swift */; };
 		7A391147D1D4475BCA1486E5 /* Pods_FoodyCookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAE2C46879E2C73C1AC2B37 /* Pods_FoodyCookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,6 @@
 		186C078C27B23CCF00D2EE8D /* FoodyCookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodyCookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186C078F27B23CCF00D2EE8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186C079127B23CCF00D2EE8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		186C079327B23CCF00D2EE8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		186C079627B23CCF00D2EE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		186C079827B23CD000D2EE8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		186C079B27B23CD000D2EE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +40,9 @@
 		186C07B527B274E500D2EE8D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		186C07B827B2823B00D2EE8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		186C07BC27B2940100D2EE8D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		186C07BE27B2B08800D2EE8D /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		186C07C027B2B82800D2EE8D /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		186C07C227B2B83900D2EE8D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		3FAE2C46879E2C73C1AC2B37 /* Pods_FoodyCookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1213BEF811B30920CF0894B /* Pods-FoodyCookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.debug.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D4199B538F5E861554573E2E /* Pods-FoodyCookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.release.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +98,6 @@
 				186C07A627B2450700D2EE8D /* Storyboard */,
 				186C078F27B23CCF00D2EE8D /* AppDelegate.swift */,
 				186C079127B23CCF00D2EE8D /* SceneDelegate.swift */,
-				186C079327B23CCF00D2EE8D /* ViewController.swift */,
 				186C079827B23CD000D2EE8D /* Assets.xcassets */,
 				186C079A27B23CD000D2EE8D /* LaunchScreen.storyboard */,
 				186C079D27B23CD000D2EE8D /* Info.plist */,
@@ -124,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				186C07BC27B2940100D2EE8D /* HomeVC.swift */,
+				186C07C027B2B82800D2EE8D /* FavouriteVC.swift */,
+				186C07C227B2B83900D2EE8D /* SearchVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				186C07B527B274E500D2EE8D /* NetworkService.swift */,
+				186C07BE27B2B08800D2EE8D /* DBService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 				186C078827B23CCF00D2EE8D /* Sources */,
 				186C078927B23CCF00D2EE8D /* Frameworks */,
 				186C078A27B23CCF00D2EE8D /* Resources */,
+				22070B9F14F961D199D897D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +258,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		22070B9F14F961D199D897D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,12 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186C079427B23CCF00D2EE8D /* ViewController.swift in Sources */,
+				186C07C327B2B83900D2EE8D /* SearchVC.swift in Sources */,
+				186C07BF27B2B08800D2EE8D /* DBService.swift in Sources */,
 				186C07A827B2453D00D2EE8D /* Food.swift in Sources */,
 				186C07B327B2652500D2EE8D /* SuperView.swift in Sources */,
 				186C07BD27B2940100D2EE8D /* HomeVC.swift in Sources */,
 				186C07B127B2650700D2EE8D /* FoodContentView.swift in Sources */,
 				186C079027B23CCF00D2EE8D /* AppDelegate.swift in Sources */,
+				186C07C127B2B82800D2EE8D /* FavouriteVC.swift in Sources */,
 				186C079227B23CCF00D2EE8D /* SceneDelegate.swift in Sources */,
 				186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */,
 				186C07B927B2823B00D2EE8D /* Constants.swift in Sources */,

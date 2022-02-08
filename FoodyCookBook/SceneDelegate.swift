@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FoodyCookBook
 //
-//  Created by Anand on 08/02/22.
+//  Created by Neeraja Mohandas on 08/02/22.
 //
 
 import UIKit

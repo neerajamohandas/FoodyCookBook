@@ -21,6 +21,10 @@ class FoodContentView: UIView {
     
     var view_content: UIView!
     var FoodItem = Food()
+    var btnFavTapped = false
+    let userDefaults = UserDefaults.standard
+    
+    //MARK: - Initialisation and data loading
     
     required override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +54,7 @@ class FoodContentView: UIView {
             self.lbl_foodName.text = self.FoodItem.name
             self.txtView_RecipeLink.text = "Recipe Source: " + self.FoodItem.recipeLink
             self.txtView_fullRecipe.text = self.FoodItem.instructions
+            self.imgView_Fav.tintColor = UIColor.gray
             self.addSubview(self.view_content)
         }
     }
@@ -60,14 +65,31 @@ class FoodContentView: UIView {
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         return nibView
     }
+    
+    //MARK: - IB Actions
+    
 
     @IBAction func btnFav_Tapped(_ sender: Any) {
+        if btnFavTapped == false {
+            btnFavTapped = true
+            let status = DBService.shared.writeDataToDB(objects: [self.FoodItem])
+            if status { self.imgView_Fav.tintColor = UIColor.red }
+        }
+        else if btnFavTapped == true {
+            btnFavTapped = false
+            let status = DBService.shared.deleteFoodfromDB(food: self.FoodItem)
+            if status { imgView_Fav.tintColor = UIColor.gray }
+        }
     }
     @IBAction func btnWatchVideo_Tapped(_ sender: Any) {
     }
     
+    
+    
+    
+    //MARK: - methods
+    
     func getDataFromAPI(){
-        
         NetworkService.shared.getDataFromServer(url: Constants.API.randomFood.rawValue) { _data, _error in
             guard let dataDict = _data else { return }
             let foodItem = dataDict.value(forKey: "meals") as! NSArray
@@ -86,7 +108,4 @@ class FoodContentView: UIView {
             self.nibSetup()
         }
     }
-    
-    
-    
 }

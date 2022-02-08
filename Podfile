@@ -6,5 +6,7 @@ target 'FoodyCookBook' do
   use_frameworks!
 
   # Pods for FoodyCookBook
+  pod 'RxRealm', '~> 5.0.3'
+  pod 'RealmSwift', '~> 10.17.0'
 
 end
