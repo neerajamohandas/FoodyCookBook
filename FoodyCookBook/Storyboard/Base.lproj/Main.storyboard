@@ -67,7 +67,7 @@
         <!--Home-->
         <scene sceneID="d90-Y9-4qY">
             <objects>
-                <viewController id="MQ6-5t-8dF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="MQ6-5t-8dF" customClass="HomeVC" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zwT-IQ-icG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="EAZ-Uc-ryT"/>
+                    <connections>
+                        <outlet property="view_FoodContentView" destination="mBh-Iw-oIF" id="UeI-Q2-ffs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfC-LE-gf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
