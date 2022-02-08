@@ -16,6 +16,8 @@ class FoodContentView: UIView {
     @IBOutlet var txtView_RecipeLink: UITextView!
     @IBOutlet var btn_watchVideo: UIButton!
     @IBOutlet var txtView_fullRecipe: UITextView!
+    @IBOutlet var imgView_Fav: UIImageView!
+    @IBOutlet var btn_Fav: UIButton!
     
     var view_content: UIView!
     
@@ -40,6 +42,7 @@ class FoodContentView: UIView {
         view_content.layer.shadowOpacity = 0.5
         view_content.layer.masksToBounds = false
         view_content.layer.cornerRadius = 10
+        getDataFromAPI()
         addSubview(view_content)
     }
     
@@ -50,4 +53,14 @@ class FoodContentView: UIView {
         return nibView
     }
 
+    @IBAction func btnFav_Tapped(_ sender: Any) {
+    }
+    @IBAction func btnWatchVideo_Tapped(_ sender: Any) {
+    }
+    
+    func getDataFromAPI(){
+        let data = NetworkService.shared.getDataFromServer(url: Constants.API.randomFood.rawValue)
+        let food = Food()
+        //food.name = data.value(forKey: "strMeal") as! String
+    }
 }

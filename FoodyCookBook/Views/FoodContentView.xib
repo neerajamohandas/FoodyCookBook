@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodContentView" customModule="FoodyCookBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_Fav" destination="dSg-7d-n8U" id="4fO-cG-9HC"/>
                 <outlet property="btn_watchVideo" destination="nke-nb-KCu" id="8ak-bh-wMM"/>
                 <outlet property="foodImage" destination="dAm-g2-aLr" id="IJ5-5J-kts"/>
+                <outlet property="imgView_Fav" destination="34Y-V0-Qlq" id="CDR-Cb-Fps"/>
                 <outlet property="lbl_foodName" destination="FFZ-Na-Hda" id="nrd-kB-Ra0"/>
                 <outlet property="txtView_RecipeLink" destination="9d0-eT-m3s" id="Ala-tl-k86"/>
                 <outlet property="txtView_fullRecipe" destination="8Z6-yB-lWu" id="vDo-8Y-sVo"/>
@@ -23,17 +25,17 @@
             <rect key="frame" x="0.0" y="0.0" width="629" height="850"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-g2-aLr">
-                    <rect key="frame" x="0.0" y="0.0" width="629" height="212.5"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lasagna" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-g2-aLr">
+                    <rect key="frame" x="2" y="2" width="625" height="238"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
-                    <rect key="frame" x="20" y="220.5" width="531.5" height="38.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
+                    <rect key="frame" x="20" y="248" width="531.5" height="38.5"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
                     <color key="textColor" name="secondary_dark"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Recipe Link:" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-eT-m3s">
-                    <rect key="frame" x="15" y="274" width="594" height="30"/>
+                    <rect key="frame" x="15" y="301.5" width="594" height="30"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Lo2-rz-Tjb"/>
@@ -43,15 +45,18 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nke-nb-KCu">
-                    <rect key="frame" x="20" y="312" width="108" height="37"/>
+                    <rect key="frame" x="20" y="339.5" width="108" height="37"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Watch Video">
                         <color key="titleColor" name="secondary"/>
                     </state>
+                    <connections>
+                        <action selector="btnWatchVideo_Tapped:" destination="-1" eventType="touchUpInside" id="b7M-il-Qh4"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-yB-lWu">
-                    <rect key="frame" x="15" y="364" width="594" height="471"/>
+                    <rect key="frame" x="15" y="391.5" width="594" height="443.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" name="textOn_secondary"/>
@@ -59,16 +64,19 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-V0-Qlq">
-                    <rect key="frame" x="566.5" y="226" width="42.5" height="40"/>
+                    <rect key="frame" x="566.5" y="253.5" width="42.5" height="40"/>
                     <color key="tintColor" name="primary_light"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="34Y-V0-Qlq" secondAttribute="height" multiplier="1:1" id="A16-6O-ZSJ"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-7d-n8U">
-                    <rect key="frame" x="566.5" y="224.5" width="42.5" height="42.5"/>
+                    <rect key="frame" x="566.5" y="252" width="42.5" height="42.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="btnFav_Tapped:" destination="-1" eventType="touchUpInside" id="SRr-sq-omw"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -76,7 +84,7 @@
             <constraints>
                 <constraint firstItem="FFZ-Na-Hda" firstAttribute="top" secondItem="dAm-g2-aLr" secondAttribute="bottom" constant="8" id="1Ue-r3-aYv"/>
                 <constraint firstItem="nke-nb-KCu" firstAttribute="top" secondItem="9d0-eT-m3s" secondAttribute="bottom" constant="8" id="6xY-dp-x3n"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dAm-g2-aLr" secondAttribute="trailing" id="BTn-9P-S70"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dAm-g2-aLr" secondAttribute="trailing" constant="2" id="BTn-9P-S70"/>
                 <constraint firstItem="8Z6-yB-lWu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Cgo-HZ-37r"/>
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Etn-Yi-iyS"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="top" secondItem="dAm-g2-aLr" secondAttribute="bottom" constant="12" id="LjI-VM-8pw"/>
@@ -91,11 +99,11 @@
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="top" secondItem="FFZ-Na-Hda" secondAttribute="bottom" constant="15" id="hzR-JZ-ijs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9d0-eT-m3s" secondAttribute="trailing" constant="20" id="j66-PW-Zo3"/>
                 <constraint firstItem="FFZ-Na-Hda" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jnX-5v-sIA"/>
-                <constraint firstItem="dAm-g2-aLr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mWM-Lm-J3t"/>
+                <constraint firstItem="dAm-g2-aLr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="mWM-Lm-J3t"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Z6-yB-lWu" secondAttribute="trailing" constant="20" id="pPe-ue-8Cn"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="bottom" secondItem="34Y-V0-Qlq" secondAttribute="bottom" id="tXx-MV-W5y"/>
-                <constraint firstItem="dAm-g2-aLr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="thP-lf-4u6"/>
-                <constraint firstItem="dAm-g2-aLr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="u7x-Dn-Kwi"/>
+                <constraint firstItem="dAm-g2-aLr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.28" id="thP-lf-4u6"/>
+                <constraint firstItem="dAm-g2-aLr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="u7x-Dn-Kwi"/>
                 <constraint firstItem="8Z6-yB-lWu" firstAttribute="top" secondItem="nke-nb-KCu" secondAttribute="bottom" constant="15" id="xKB-gN-GCk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -104,6 +112,7 @@
     </objects>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="lasagna" width="2000" height="1500"/>
         <namedColor name="primary_light">
             <color red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

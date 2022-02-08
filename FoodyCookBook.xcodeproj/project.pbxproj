@@ -18,6 +18,7 @@
 		186C07B127B2650700D2EE8D /* FoodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B027B2650700D2EE8D /* FoodContentView.swift */; };
 		186C07B327B2652500D2EE8D /* SuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B227B2652500D2EE8D /* SuperView.swift */; };
 		186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B527B274E500D2EE8D /* NetworkService.swift */; };
+		186C07B927B2823B00D2EE8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07B827B2823B00D2EE8D /* Constants.swift */; };
 		322E8A2B6E326971DC2755C9 /* Pods_FoodyCookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719C2C3C9CAF0DF178D66B08 /* Pods_FoodyCookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		186C07B027B2650700D2EE8D /* FoodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContentView.swift; sourceTree = "<group>"; };
 		186C07B227B2652500D2EE8D /* SuperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperView.swift; sourceTree = "<group>"; };
 		186C07B527B274E500D2EE8D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		186C07B827B2823B00D2EE8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		719C2C3C9CAF0DF178D66B08 /* Pods_FoodyCookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836721C60BF6679ED57E643D /* Pods-FoodyCookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.debug.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		B118F46134714969FB121416 /* Pods-FoodyCookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.release.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				186C07A427B244D400D2EE8D /* Views */,
 				186C07A527B244E700D2EE8D /* Controllers */,
 				186C07B427B274BF00D2EE8D /* Services */,
+				186C07B727B2821E00D2EE8D /* Supporting Files */,
 				186C07A627B2450700D2EE8D /* Storyboard */,
 				186C078F27B23CCF00D2EE8D /* AppDelegate.swift */,
 				186C079127B23CCF00D2EE8D /* SceneDelegate.swift */,
@@ -138,6 +141,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		186C07B727B2821E00D2EE8D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				186C07B827B2823B00D2EE8D /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BC7920D03594F036ED737AF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +168,7 @@
 				186C078827B23CCF00D2EE8D /* Sources */,
 				186C078927B23CCF00D2EE8D /* Frameworks */,
 				186C078A27B23CCF00D2EE8D /* Resources */,
+				3573734D8C1166EF796CCA65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +227,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3573734D8C1166EF796CCA65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		58958E8A05438AFD4E788673 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +280,7 @@
 				186C079027B23CCF00D2EE8D /* AppDelegate.swift in Sources */,
 				186C079227B23CCF00D2EE8D /* SceneDelegate.swift in Sources */,
 				186C07B627B274E500D2EE8D /* NetworkService.swift in Sources */,
+				186C07B927B2823B00D2EE8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

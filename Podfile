@@ -6,5 +6,5 @@ target 'FoodyCookBook' do
   use_frameworks!
 
   # Pods for FoodyCookBook
-
+  pod 'Alamofire', '~> 5.4.4'
 end
