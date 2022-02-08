@@ -29,24 +29,23 @@
                     <rect key="frame" x="2" y="2" width="625" height="238"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
-                    <rect key="frame" x="20" y="248" width="531.5" height="38.5"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
+                    <rect key="frame" x="20" y="248" width="531.5" height="33"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                     <color key="textColor" name="secondary_dark"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Recipe Link:" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-eT-m3s">
-                    <rect key="frame" x="15" y="301.5" width="594" height="30"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Recipe Link:" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-eT-m3s">
+                    <rect key="frame" x="15" y="296" width="594" height="41"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Lo2-rz-Tjb"/>
-                    </constraints>
+                    <color key="tintColor" name="secondary_dark"/>
                     <color key="textColor" name="textOn_secondary"/>
-                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nke-nb-KCu">
-                    <rect key="frame" x="20" y="339.5" width="108" height="37"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                    <rect key="frame" x="20" y="345" width="90" height="33"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Watch Video">
                         <color key="titleColor" name="secondary"/>
@@ -55,12 +54,12 @@
                         <action selector="btnWatchVideo_Tapped:" destination="-1" eventType="touchUpInside" id="b7M-il-Qh4"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-yB-lWu">
-                    <rect key="frame" x="15" y="391.5" width="594" height="443.5"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-yB-lWu">
+                    <rect key="frame" x="15" y="393" width="594" height="442"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" name="textOn_secondary"/>
-                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-V0-Qlq">
@@ -94,6 +93,7 @@
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="leading" secondItem="FFZ-Na-Hda" secondAttribute="trailing" constant="15" id="Zgw-IK-6A2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="34Y-V0-Qlq" secondAttribute="trailing" constant="20" id="bKg-A7-nKS"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.05" id="bRs-b2-xQa"/>
+                <constraint firstItem="9d0-eT-m3s" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.048" id="bT9-o2-axS"/>
                 <constraint firstAttribute="bottom" secondItem="8Z6-yB-lWu" secondAttribute="bottom" constant="15" id="cnS-a3-aCA"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="top" secondItem="34Y-V0-Qlq" secondAttribute="top" id="gFz-e5-0y1"/>
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="top" secondItem="FFZ-Na-Hda" secondAttribute="bottom" constant="15" id="hzR-JZ-ijs"/>
