@@ -22,6 +22,8 @@
 		186C07BF27B2B08800D2EE8D /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07BE27B2B08800D2EE8D /* DBService.swift */; };
 		186C07C127B2B82800D2EE8D /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07C027B2B82800D2EE8D /* FavouriteVC.swift */; };
 		186C07C327B2B83900D2EE8D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07C227B2B83900D2EE8D /* SearchVC.swift */; };
+		186C07CC27B2C1BE00D2EE8D /* FavTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C07CA27B2C1BE00D2EE8D /* FavTVCell.swift */; };
+		186C07CD27B2C1BE00D2EE8D /* FavTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C07CB27B2C1BE00D2EE8D /* FavTVCell.xib */; };
 		7A391147D1D4475BCA1486E5 /* Pods_FoodyCookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAE2C46879E2C73C1AC2B37 /* Pods_FoodyCookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		186C07BE27B2B08800D2EE8D /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		186C07C027B2B82800D2EE8D /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		186C07C227B2B83900D2EE8D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		186C07CA27B2C1BE00D2EE8D /* FavTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTVCell.swift; sourceTree = "<group>"; };
+		186C07CB27B2C1BE00D2EE8D /* FavTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTVCell.xib; sourceTree = "<group>"; };
 		3FAE2C46879E2C73C1AC2B37 /* Pods_FoodyCookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1213BEF811B30920CF0894B /* Pods-FoodyCookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.debug.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D4199B538F5E861554573E2E /* Pods-FoodyCookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCookBook.release.xcconfig"; path = "Target Support Files/Pods-FoodyCookBook/Pods-FoodyCookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				186C07B227B2652500D2EE8D /* SuperView.swift */,
 				186C07A927B2639500D2EE8D /* FoodContentView.xib */,
 				186C07B027B2650700D2EE8D /* FoodContentView.swift */,
+				186C07CA27B2C1BE00D2EE8D /* FavTVCell.swift */,
+				186C07CB27B2C1BE00D2EE8D /* FavTVCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186C07CD27B2C1BE00D2EE8D /* FavTVCell.xib in Resources */,
 				186C079C27B23CD000D2EE8D /* LaunchScreen.storyboard in Resources */,
 				186C079927B23CD000D2EE8D /* Assets.xcassets in Resources */,
 				186C07AA27B2639500D2EE8D /* FoodContentView.xib in Resources */,
@@ -287,6 +294,7 @@
 				186C07A827B2453D00D2EE8D /* Food.swift in Sources */,
 				186C07B327B2652500D2EE8D /* SuperView.swift in Sources */,
 				186C07BD27B2940100D2EE8D /* HomeVC.swift in Sources */,
+				186C07CC27B2C1BE00D2EE8D /* FavTVCell.swift in Sources */,
 				186C07B127B2650700D2EE8D /* FoodContentView.swift in Sources */,
 				186C079027B23CCF00D2EE8D /* AppDelegate.swift in Sources */,
 				186C07C127B2B82800D2EE8D /* FavouriteVC.swift in Sources */,

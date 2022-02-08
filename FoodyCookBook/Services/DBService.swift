@@ -52,6 +52,7 @@ class DBService {
     
     func getFoodDataFromDB() -> Results<Food>? {
         var results: Results<Food>?
+        realm.refresh()
         results = self.realm.objects(Food.self)
         return results
         }
