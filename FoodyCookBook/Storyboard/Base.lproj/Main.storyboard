@@ -56,16 +56,45 @@
                     <view key="view" contentMode="scaleToFill" id="Af1-KN-rcH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-34-lsd">
+                                <rect key="frame" x="20" y="64" width="374" height="55"/>
+                                <color key="backgroundColor" name="primary_light"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="UBC-6J-y14"/>
+                                </constraints>
+                                <color key="tintColor" name="primary_light"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-J2-j12">
+                                <rect key="frame" x="20" y="149" width="374" height="644"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4cj-lB-gxH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4cj-lB-gxH" firstAttribute="bottom" secondItem="gJd-J2-j12" secondAttribute="bottom" constant="20" id="0Vq-ab-gP0"/>
+                            <constraint firstItem="flQ-34-lsd" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="H9y-cy-O5a"/>
+                            <constraint firstItem="gJd-J2-j12" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="J5F-z1-Wce"/>
+                            <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="gJd-J2-j12" secondAttribute="trailing" constant="20" id="O0w-Wg-r6d"/>
+                            <constraint firstItem="flQ-34-lsd" firstAttribute="top" secondItem="4cj-lB-gxH" secondAttribute="top" constant="20" id="XuD-KJ-8iI"/>
+                            <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="flQ-34-lsd" secondAttribute="trailing" constant="20" id="c5w-JG-g1q"/>
+                            <constraint firstItem="gJd-J2-j12" firstAttribute="top" secondItem="flQ-34-lsd" secondAttribute="bottom" constant="30" id="y6U-9x-BJl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="7eM-ZI-Wtk"/>
                     <navigationItem key="navigationItem" id="Pqt-V4-9UG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="serachBar" destination="flQ-34-lsd" id="JsY-nn-ldt"/>
+                        <outlet property="tableView_Search" destination="gJd-J2-j12" id="a3q-Zd-ICl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9A-Yf-AnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2172" y="-200"/>
+            <point key="canvasLocation" x="-2172.463768115942" y="-200.22321428571428"/>
         </scene>
         <!--Home-->
         <scene sceneID="d90-Y9-4qY">
@@ -134,10 +163,13 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <namedColor name="primary_dark">
-            <color red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.28600001335144043" green="0.28600001335144043" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary_light">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary_dark">
-            <color red="0.7803921568627451" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77999997138977051" green="0.47099998593330383" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textOn_primary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

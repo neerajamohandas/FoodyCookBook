@@ -9,21 +9,39 @@ import UIKit
 
 class SearchVC: UIViewController {
 
+    @IBOutlet var tableView_Search: UITableView!
+    @IBOutlet var serachBar: UISearchBar!
+    
+    var results = [Food]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        serachBar.delegate = self
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension SearchVC: UISearchBarDelegate {
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+        let api = Constants.API.searchFood.rawValue + text
+        NetworkService.shared.getDataFromServer(url: api) { _data, _error in
+            if let data = _data {
+                print(data)
+            }
+        }
+    }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+        let api = Constants.API.searchFood.rawValue + text
+        NetworkService.shared.getDataFromServer(url: api) { _data, _error in
+            if let data = _data {
+                print(data)
+            }
+        }
     }
-    */
-
+    }
 }
