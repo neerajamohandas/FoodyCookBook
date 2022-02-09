@@ -29,7 +29,7 @@
                     <rect key="frame" x="2" y="2" width="625" height="238"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
-                    <rect key="frame" x="20" y="248" width="531.5" height="33"/>
+                    <rect key="frame" x="20" y="248" width="549" height="33"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                     <color key="textColor" name="secondary_dark"/>
                     <nil key="highlightedColor"/>
@@ -65,14 +65,15 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-V0-Qlq">
-                    <rect key="frame" x="566.5" y="253.5" width="42.5" height="40"/>
+                    <rect key="frame" x="584" y="253.5" width="25" height="22.5"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="34Y-V0-Qlq" secondAttribute="height" multiplier="1:1" id="A16-6O-ZSJ"/>
+                        <constraint firstAttribute="height" constant="25" id="LEv-Iz-1Wi"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-7d-n8U">
-                    <rect key="frame" x="566.5" y="252" width="42.5" height="42.5"/>
+                    <rect key="frame" x="584" y="252" width="25" height="25"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
@@ -94,7 +95,6 @@
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="trailing" secondItem="34Y-V0-Qlq" secondAttribute="trailing" id="T48-rj-gbT"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="leading" secondItem="FFZ-Na-Hda" secondAttribute="trailing" constant="15" id="Zgw-IK-6A2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="34Y-V0-Qlq" secondAttribute="trailing" constant="20" id="bKg-A7-nKS"/>
-                <constraint firstItem="34Y-V0-Qlq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.05" id="bRs-b2-xQa"/>
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.048" id="bT9-o2-axS"/>
                 <constraint firstAttribute="bottom" secondItem="8Z6-yB-lWu" secondAttribute="bottom" constant="15" id="cnS-a3-aCA"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="top" secondItem="34Y-V0-Qlq" secondAttribute="top" id="gFz-e5-0y1"/>
