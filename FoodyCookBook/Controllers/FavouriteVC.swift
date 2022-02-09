@@ -11,7 +11,7 @@ import RxRealm
 import RealmSwift
 
 class FavouriteVC: UIViewController {
-
+    
     @IBOutlet var tableView_Fav: UITableView!
     
     var favourites: Results<Food>?
@@ -39,6 +39,7 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavTVCell", for: indexPath) as! FavTVCell
         cell.tableViewRef = tableView
+        cell.isFavouriteScreen = true
         let food = favourites?[indexPath.row]
         cell.FoodItem = food!
         cell.lbl_name.text = food?.name

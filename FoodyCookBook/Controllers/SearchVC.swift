@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchVC: UIViewController {
-
+    
     @IBOutlet var tableView_Search: UITableView!
     @IBOutlet var serachBar: UISearchBar!
     
@@ -33,13 +33,13 @@ class SearchVC: UIViewController {
         serachBar.text = ""
         self.tableView_Search.reloadData()
     }
-
+    
 }
 
 extension SearchVC: UISearchBarDelegate {
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-     
+        
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.results = [Food]()
@@ -49,45 +49,45 @@ extension SearchVC: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let text = searchBar.text, text != "" {
-        let api = Constants.API.searchFood.rawValue + text
-        NetworkService.shared.getDataFromServer(url: api) { _data, _error in
-            if _error == nil {
-                if let data = _data {
-                    if let foods = data.value(forKey: "meals") as? NSArray {
-                    for i in 0...(foods.count - 1) {
-                        let foodDict =  foods[i] as! NSDictionary
-                        let foodItem = Food()
-                        let name = foodDict.value(forKey: "strMeal") as? String ?? ""
-                        foodItem.name = name
-                        let id = foodDict.value(forKey: "idMeal") as? String ?? ""
-                        foodItem.id = id
-                        let recipe = foodDict.value(forKey: "strInstructions") as? String ?? ""
-                        foodItem.instructions = recipe
-                        let source = foodDict.value(forKey: "strSource") as? String ?? ""
-                        foodItem.recipeLink = source
-                        let video = foodDict.value(forKey: "strYoutube") as? String ?? ""
-                        foodItem.recipeLink = video
-                        let image = foodDict.value(forKey: "strMealThumb") as? String ?? ""
-                        foodItem.recipeLink = image
-                        self.results.append(foodItem)
+            let api = Constants.API.searchFood.rawValue + text
+            NetworkService.shared.getDataFromServer(url: api) { _data, _error in
+                if _error == nil {
+                    if let data = _data {
+                        if let foods = data.value(forKey: "meals") as? NSArray {
+                            for i in 0...(foods.count - 1) {
+                                let foodDict =  foods[i] as! NSDictionary
+                                let foodItem = Food()
+                                let name = foodDict.value(forKey: "strMeal") as? String ?? ""
+                                foodItem.name = name
+                                let id = foodDict.value(forKey: "idMeal") as? String ?? ""
+                                foodItem.id = id
+                                let recipe = foodDict.value(forKey: "strInstructions") as? String ?? ""
+                                foodItem.instructions = recipe
+                                let source = foodDict.value(forKey: "strSource") as? String ?? ""
+                                foodItem.recipeLink = source
+                                let video = foodDict.value(forKey: "strYoutube") as? String ?? ""
+                                foodItem.recipeLink = video
+                                let image = foodDict.value(forKey: "strMealThumb") as? String ?? ""
+                                foodItem.recipeLink = image
+                                self.results.append(foodItem)
+                            }
+                        }
+                        print(self.results.count)
+                        DispatchQueue.main.async {
+                            if self.results.count == 0 {
+                                self.showAlert()
+                            }else{
+                                self.tableView_Search.reloadData()
+                            }
+                        }
                     }
-                    }
-                    print(self.results.count)
-                    DispatchQueue.main.async {
-                     if self.results.count == 0 {
-                        self.showAlert()
-                     }else{
-                        self.tableView_Search.reloadData()
-                    }
-                    }
+                }else {
+                    print("No item found")
                 }
-            }else {
-                print("No item found")
+                
+                
             }
-            
-            
         }
-    }
     }
 }
 
@@ -98,14 +98,14 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let  cell = self.tableView_Search.dequeueReusableCell(withIdentifier: "FavTVCell", for: indexPath) as! FavTVCell
-            let data = self.results[indexPath.row]
-            cell.tableViewRef = tableView_Search
-            cell.FoodItem = data
-            cell.lbl_name.text = data.name
-            cell.txtView_fullRecipe.text = data.instructions
-            cell.imgView_fav.tintColor = UIColor.gray
-            cell.txtView_recipeLink.text = "Watch video:-  " + data.videoLink
+        let  cell = self.tableView_Search.dequeueReusableCell(withIdentifier: "FavTVCell", for: indexPath) as! FavTVCell
+        let data = self.results[indexPath.row]
+        cell.tableViewRef = tableView_Search
+        cell.FoodItem = data
+        cell.lbl_name.text = data.name
+        cell.txtView_fullRecipe.text = data.instructions
+        cell.imgView_fav.tintColor = UIColor.gray
+        cell.txtView_recipeLink.text = "Watch video:-  " + data.videoLink
         return cell
     }
     

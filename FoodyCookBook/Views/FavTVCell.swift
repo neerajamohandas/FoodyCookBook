@@ -16,6 +16,7 @@ class FavTVCell: UITableViewCell {
     @IBOutlet var view_Shadow: UIView!
     var tableViewRef: UITableView!
     var FoodItem = Food()
+    var isFavouriteScreen = false
     override func awakeFromNib() {
         super.awakeFromNib()
         txtView_fullRecipe.sizeToFit()
@@ -37,11 +38,11 @@ class FavTVCell: UITableViewCell {
         if imgView_fav.tintColor == UIColor.red {
             let status = DBService.shared.deleteFoodfromDB(food: self.FoodItem)
             if status { imgView_fav.tintColor = UIColor.gray }
-            tableViewRef.reloadData()
+            if isFavouriteScreen == true { tableViewRef.reloadData() }
         }else if imgView_fav.tintColor == UIColor.gray {
             let status = DBService.shared.writeDataToDB(objects: [self.FoodItem])
             if status { self.imgView_fav.tintColor = UIColor.red }
-            tableViewRef.reloadData()
+            if isFavouriteScreen == true { tableViewRef.reloadData() }
         }
     }
 }

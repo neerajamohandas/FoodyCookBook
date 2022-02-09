@@ -22,7 +22,7 @@
                         <rect key="frame" x="5" y="5" width="353" height="442"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-pm-T8S">
-                                <rect key="frame" x="8" y="15" width="300" height="27.5"/>
+                                <rect key="frame" x="8" y="15" width="297" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <color key="textColor" name="secondary_dark"/>
                                 <nil key="highlightedColor"/>
@@ -37,15 +37,16 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIi-PJ-vxH">
-                                <rect key="frame" x="323" y="16.5" width="22" height="19.5"/>
+                                <rect key="frame" x="320" y="16.5" width="25" height="22.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="primary_light"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tIi-PJ-vxH" secondAttribute="height" multiplier="1:1" id="PCe-TH-P9s"/>
+                                    <constraint firstAttribute="height" constant="25" id="oW4-dr-DNp"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-zH-fvv">
-                                <rect key="frame" x="323" y="15" width="22" height="22"/>
+                                <rect key="frame" x="320" y="15" width="25" height="25"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -71,7 +72,6 @@
                             <constraint firstAttribute="bottom" secondItem="kav-qX-9Ok" secondAttribute="bottom" constant="8" id="JpA-4H-0BK"/>
                             <constraint firstItem="Vdt-Kg-IEa" firstAttribute="top" secondItem="fo1-pm-T8S" secondAttribute="bottom" constant="8" id="Q6w-6t-sHZ"/>
                             <constraint firstItem="tIi-PJ-vxH" firstAttribute="top" secondItem="lfo-k8-mX0" secondAttribute="top" constant="15" id="QL7-XQ-91S"/>
-                            <constraint firstItem="tIi-PJ-vxH" firstAttribute="height" secondItem="lfo-k8-mX0" secondAttribute="height" multiplier="0.05" id="U1j-SI-PnV"/>
                             <constraint firstAttribute="trailing" secondItem="tIi-PJ-vxH" secondAttribute="trailing" constant="8" id="Wl5-VC-Cua"/>
                             <constraint firstItem="fo1-pm-T8S" firstAttribute="top" secondItem="lfo-k8-mX0" secondAttribute="top" constant="15" id="bhd-Tn-Zw8"/>
                             <constraint firstAttribute="trailing" secondItem="Vdt-Kg-IEa" secondAttribute="trailing" constant="8" id="bne-fa-NAK"/>

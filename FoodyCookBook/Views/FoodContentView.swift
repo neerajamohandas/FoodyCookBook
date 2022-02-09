@@ -8,7 +8,7 @@
 import UIKit
 
 class FoodContentView: UIView {
-
+    
     //MARK: - Properties
     
     @IBOutlet var foodImage: UIImageView!
@@ -39,7 +39,7 @@ class FoodContentView: UIView {
     }
     
     private func nibSetup() {
-            
+        
         DispatchQueue.main.async {
             self.view_content.frame = self.bounds
             self.view_content.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -74,7 +74,7 @@ class FoodContentView: UIView {
     
     //MARK: - IB Actions
     
-
+    
     @IBAction func btnFav_Tapped(_ sender: Any) {
         if btnFavTapped == false {
             btnFavTapped = true
@@ -103,7 +103,7 @@ class FoodContentView: UIView {
             let recipe = foodItem.value(forKey: "strInstructions") as! NSArray
             self.FoodItem.instructions = recipe[0] as? String ?? ""
             let source = foodItem.value(forKey: "strSource") as! NSArray
-                self.FoodItem.recipeLink = source[0] as? String ?? ""
+            self.FoodItem.recipeLink = source[0] as? String ?? ""
             let youtube = foodItem.value(forKey: "strYoutube") as! NSArray
             self.FoodItem.videoLink = youtube[0] as? String ?? ""
             let thumb = foodItem.value(forKey: "strMealThumb") as! NSArray
