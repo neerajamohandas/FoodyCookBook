@@ -8,15 +8,19 @@
 import UIKit
 
 class FavTVCell: UITableViewCell {
+    
+    //MARK: - IB Outlets
     @IBOutlet var lbl_name: UILabel!
     @IBOutlet var txtView_recipeLink: UITextView!
     @IBOutlet var txtView_fullRecipe: UITextView!
     @IBOutlet var imgView_fav: UIImageView!
-    
     @IBOutlet var view_Shadow: UIView!
+    
+    //Properties
     var tableViewRef: UITableView!
     var FoodItem = Food()
     var isFavouriteScreen = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         txtView_fullRecipe.sizeToFit()
@@ -27,12 +31,12 @@ class FavTVCell: UITableViewCell {
         view_Shadow.layer.masksToBounds = false
         view_Shadow.layer.cornerRadius = 10
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
+    //MARK: - IB action
     
     @IBAction func btnFavTapped(_ sender: Any) {
         if imgView_fav.tintColor == UIColor.red {

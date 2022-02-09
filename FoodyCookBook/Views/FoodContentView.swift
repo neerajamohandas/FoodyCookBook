@@ -17,8 +17,8 @@ class FoodContentView: UIView {
     @IBOutlet var txtView_fullRecipe: UITextView!
     @IBOutlet var imgView_Fav: UIImageView!
     @IBOutlet var btn_Fav: UIButton!
-    
     @IBOutlet var txtView_video: UITextView!
+    
     var view_content: UIView!
     var FoodItem = Food()
     var btnFavTapped = false

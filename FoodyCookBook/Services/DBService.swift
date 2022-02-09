@@ -38,14 +38,14 @@ class DBService {
     
     func deleteFoodfromDB(food: Food) -> Bool{
         var deleted = false
-            do{
-                try self.realm.write({ () in
-                    self.realm.delete(food)
-                    deleted = true
-                })
-            }catch(let error){
-                print("DB deleting error:- \(error.localizedDescription)")
-            }
+        do{
+            try self.realm.write({ () in
+                self.realm.delete(food)
+                deleted = true
+            })
+        }catch(let error){
+            print("DB deleting error:- \(error.localizedDescription)")
+        }
         
         return deleted
     }
@@ -55,7 +55,7 @@ class DBService {
         realm.refresh()
         results = self.realm.objects(Food.self)
         return results
-        }
+    }
     
 }
 

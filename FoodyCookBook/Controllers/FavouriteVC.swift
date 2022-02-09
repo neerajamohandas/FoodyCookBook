@@ -12,10 +12,11 @@ import RealmSwift
 
 class FavouriteVC: UIViewController {
     
+    //MARK: - IBoutlets and properties
     @IBOutlet var tableView_Fav: UITableView!
-    
     var favourites: Results<Food>?
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView_Fav.delegate = self
@@ -30,12 +31,12 @@ class FavouriteVC: UIViewController {
     }
 }
 
+//MARK: - Table view functions
 extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favourites?.count ?? 0
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavTVCell", for: indexPath) as! FavTVCell
         cell.tableViewRef = tableView
@@ -46,12 +47,9 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         cell.txtView_recipeLink.text = "Watch video:- " + food!.videoLink
         cell.txtView_fullRecipe.text = food?.instructions
         cell.imgView_fav.tintColor = UIColor.red
-        
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
 }

@@ -17,7 +17,6 @@ class NetworkService {
         var urlComponents = URLComponents(string: url)
         urlComponents?.scheme = "https"
         
-        
         guard let urlValue = urlComponents?.url else { return }
         var urlRequest = URLRequest(url: urlValue)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -37,20 +36,5 @@ class NetworkService {
             }
         }
         task.resume()
-       /*
-        AF.request(urlRequest).response { response in
-            
-            switch response.result {
-                
-            case .success:
-                guard let responseData = response.response else {return}
-                guard let dataServer = response.data else {return}
-                result = dataServer
-            case .failure:
-                print("Error when fetching data..")
-            }
-            
-        }
-        */
     }
 }

@@ -9,11 +9,12 @@ import UIKit
 
 class SearchVC: UIViewController {
     
+    //MARK: - IBOutlets and properties
     @IBOutlet var tableView_Search: UITableView!
     @IBOutlet var serachBar: UISearchBar!
-    
     var results = [Food]()
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         serachBar.delegate = self
@@ -23,7 +24,6 @@ class SearchVC: UIViewController {
         serachBar.layer.borderWidth = 1
         serachBar.layer.cornerRadius = 10
         serachBar.clipsToBounds = true
-        
         tableView_Search.register(UINib(nibName: "FavTVCell", bundle: nil), forCellReuseIdentifier: "FavTVCell")
         tableView_Search.estimatedRowHeight = 700
     }
@@ -33,19 +33,15 @@ class SearchVC: UIViewController {
         serachBar.text = ""
         self.tableView_Search.reloadData()
     }
-    
 }
 
+//MARK: - SearchBar functions
+
 extension SearchVC: UISearchBarDelegate {
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        
-    }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.results = [Food]()
         self.tableView_Search.reloadData()
     }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let text = searchBar.text, text != "" {
@@ -84,19 +80,17 @@ extension SearchVC: UISearchBarDelegate {
                 }else {
                     print("No item found")
                 }
-                
-                
             }
         }
     }
 }
 
+//MARK: - Tableview functions
 extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.results.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = self.tableView_Search.dequeueReusableCell(withIdentifier: "FavTVCell", for: indexPath) as! FavTVCell
         let data = self.results[indexPath.row]
@@ -109,6 +103,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    //MARK: - Other methods
     private func showAlert(){
         let alertVC = UIAlertController(title: "", message: "No food item found !", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: { action in
