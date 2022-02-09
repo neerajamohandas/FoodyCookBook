@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-34-lsd">
-                                <rect key="frame" x="20" y="64" width="374" height="55"/>
+                                <rect key="frame" x="20" y="74" width="374" height="55"/>
                                 <color key="backgroundColor" name="primary_light"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="UBC-6J-y14"/>
@@ -68,7 +68,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-J2-j12">
-                                <rect key="frame" x="20" y="149" width="374" height="644"/>
+                                <rect key="frame" x="20" y="159" width="374" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -79,7 +79,7 @@
                             <constraint firstItem="flQ-34-lsd" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="H9y-cy-O5a"/>
                             <constraint firstItem="gJd-J2-j12" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="J5F-z1-Wce"/>
                             <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="gJd-J2-j12" secondAttribute="trailing" constant="20" id="O0w-Wg-r6d"/>
-                            <constraint firstItem="flQ-34-lsd" firstAttribute="top" secondItem="4cj-lB-gxH" secondAttribute="top" constant="20" id="XuD-KJ-8iI"/>
+                            <constraint firstItem="flQ-34-lsd" firstAttribute="top" secondItem="4cj-lB-gxH" secondAttribute="top" constant="30" id="XuD-KJ-8iI"/>
                             <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="flQ-34-lsd" secondAttribute="trailing" constant="20" id="c5w-JG-g1q"/>
                             <constraint firstItem="gJd-J2-j12" firstAttribute="top" secondItem="flQ-34-lsd" secondAttribute="bottom" constant="30" id="y6U-9x-BJl"/>
                         </constraints>

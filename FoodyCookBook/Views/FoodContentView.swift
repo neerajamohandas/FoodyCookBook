@@ -97,28 +97,25 @@ class FoodContentView: UIView {
             guard let dataDict = _data else { return }
             let foodItem = dataDict.value(forKey: "meals") as! NSArray
             let meal = foodItem.value(forKey: "strMeal") as! NSArray
-            self.FoodItem.name = meal[0] as! String
+            self.FoodItem.name = meal[0] as? String ?? ""
             let id = foodItem.value(forKey: "idMeal") as! NSArray
-            self.FoodItem.id = id[0] as! String
+            self.FoodItem.id = id[0] as? String ?? ""
             let recipe = foodItem.value(forKey: "strInstructions") as! NSArray
-            self.FoodItem.instructions = recipe[0] as! String
+            self.FoodItem.instructions = recipe[0] as? String ?? ""
             let source = foodItem.value(forKey: "strSource") as! NSArray
-            self.FoodItem.recipeLink = source[0] as! String
+                self.FoodItem.recipeLink = source[0] as? String ?? ""
             let youtube = foodItem.value(forKey: "strYoutube") as! NSArray
-            self.FoodItem.videoLink = youtube[0] as! String
+            self.FoodItem.videoLink = youtube[0] as? String ?? ""
             let thumb = foodItem.value(forKey: "strMealThumb") as! NSArray
-            self.FoodItem.thumbImage = thumb[0] as! String
+            self.FoodItem.thumbImage = thumb[0] as? String ?? ""
             self.nibSetup()
         }
     }
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            // always update the UI from the main thread
             DispatchQueue.main.async() { [weak self] in
                 self?.foodImage.image = UIImage(data: data)
             }
