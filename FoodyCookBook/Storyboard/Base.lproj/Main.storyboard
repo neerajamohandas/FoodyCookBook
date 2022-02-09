@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favourites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewi-E8-txF">
-                                <rect key="frame" x="20" y="64" width="374" height="29"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                <rect key="frame" x="20" y="64" width="374" height="32"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <color key="textColor" name="secondary_dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7rX-Kc-ez5">
-                                <rect key="frame" x="20" y="108" width="374" height="690"/>
+                                <rect key="frame" x="20" y="111" width="374" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search for your food.." translatesAutoresizingMaskIntoConstraints="NO" id="flQ-34-lsd">
-                                <rect key="frame" x="20" y="74" width="374" height="55"/>
+                                <rect key="frame" x="20" y="111" width="374" height="55"/>
                                 <color key="backgroundColor" name="primary_light"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="UBC-6J-y14"/>
@@ -68,19 +68,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-J2-j12">
-                                <rect key="frame" x="20" y="159" width="374" height="634"/>
+                                <rect key="frame" x="20" y="196" width="374" height="597"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Web-cm-Qz2">
+                                <rect key="frame" x="20" y="64" width="374" height="32"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" name="secondary_dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4cj-lB-gxH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4cj-lB-gxH" firstAttribute="bottom" secondItem="gJd-J2-j12" secondAttribute="bottom" constant="20" id="0Vq-ab-gP0"/>
+                            <constraint firstItem="Web-cm-Qz2" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="1mp-Wy-36M"/>
                             <constraint firstItem="flQ-34-lsd" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="H9y-cy-O5a"/>
                             <constraint firstItem="gJd-J2-j12" firstAttribute="leading" secondItem="4cj-lB-gxH" secondAttribute="leading" constant="20" id="J5F-z1-Wce"/>
                             <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="gJd-J2-j12" secondAttribute="trailing" constant="20" id="O0w-Wg-r6d"/>
-                            <constraint firstItem="flQ-34-lsd" firstAttribute="top" secondItem="4cj-lB-gxH" secondAttribute="top" constant="30" id="XuD-KJ-8iI"/>
+                            <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="Web-cm-Qz2" secondAttribute="trailing" constant="20" id="P7x-rx-Tfy"/>
+                            <constraint firstItem="Web-cm-Qz2" firstAttribute="top" secondItem="4cj-lB-gxH" secondAttribute="top" constant="20" id="QMN-b3-Qqf"/>
                             <constraint firstItem="4cj-lB-gxH" firstAttribute="trailing" secondItem="flQ-34-lsd" secondAttribute="trailing" constant="20" id="c5w-JG-g1q"/>
+                            <constraint firstItem="flQ-34-lsd" firstAttribute="top" secondItem="Web-cm-Qz2" secondAttribute="bottom" constant="15" id="f8A-Or-vXq"/>
                             <constraint firstItem="gJd-J2-j12" firstAttribute="top" secondItem="flQ-34-lsd" secondAttribute="bottom" constant="30" id="y6U-9x-BJl"/>
                         </constraints>
                     </view>
