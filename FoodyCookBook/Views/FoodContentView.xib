@@ -12,12 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodContentView" customModule="FoodyCookBook" customModuleProvider="target">
             <connections>
                 <outlet property="btn_Fav" destination="dSg-7d-n8U" id="4fO-cG-9HC"/>
-                <outlet property="btn_watchVideo" destination="nke-nb-KCu" id="8ak-bh-wMM"/>
                 <outlet property="foodImage" destination="dAm-g2-aLr" id="IJ5-5J-kts"/>
                 <outlet property="imgView_Fav" destination="34Y-V0-Qlq" id="CDR-Cb-Fps"/>
                 <outlet property="lbl_foodName" destination="FFZ-Na-Hda" id="nrd-kB-Ra0"/>
                 <outlet property="txtView_RecipeLink" destination="9d0-eT-m3s" id="Ala-tl-k86"/>
                 <outlet property="txtView_fullRecipe" destination="8Z6-yB-lWu" id="vDo-8Y-sVo"/>
+                <outlet property="txtView_video" destination="mhy-ds-YCq" id="gqP-QI-Cyd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -43,19 +43,21 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nke-nb-KCu">
-                    <rect key="frame" x="20" y="345" width="90" height="33"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Watch Video">
-                        <color key="titleColor" name="secondary"/>
-                    </state>
-                    <connections>
-                        <action selector="btnWatchVideo_Tapped:" destination="-1" eventType="touchUpInside" id="b7M-il-Qh4"/>
-                    </connections>
-                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhy-ds-YCq">
+                    <rect key="frame" x="20" y="345" width="589" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" name="secondary_dark"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="e95-Ve-13Q"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" name="textOn_secondary"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-yB-lWu">
-                    <rect key="frame" x="15" y="393" width="594" height="442"/>
+                    <rect key="frame" x="15" y="403" width="594" height="432"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" name="textOn_secondary"/>
@@ -82,14 +84,14 @@
             <color key="backgroundColor" name="textOn_primary"/>
             <constraints>
                 <constraint firstItem="FFZ-Na-Hda" firstAttribute="top" secondItem="dAm-g2-aLr" secondAttribute="bottom" constant="8" id="1Ue-r3-aYv"/>
-                <constraint firstItem="nke-nb-KCu" firstAttribute="top" secondItem="9d0-eT-m3s" secondAttribute="bottom" constant="8" id="6xY-dp-x3n"/>
+                <constraint firstItem="mhy-ds-YCq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="5V5-Nh-tMf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dAm-g2-aLr" secondAttribute="trailing" constant="2" id="BTn-9P-S70"/>
                 <constraint firstItem="8Z6-yB-lWu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Cgo-HZ-37r"/>
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Etn-Yi-iyS"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="top" secondItem="dAm-g2-aLr" secondAttribute="bottom" constant="12" id="LjI-VM-8pw"/>
+                <constraint firstItem="8Z6-yB-lWu" firstAttribute="top" secondItem="mhy-ds-YCq" secondAttribute="bottom" constant="8" id="PQE-G0-bUT"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="leading" secondItem="34Y-V0-Qlq" secondAttribute="leading" id="Qar-lC-BoR"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="trailing" secondItem="34Y-V0-Qlq" secondAttribute="trailing" id="T48-rj-gbT"/>
-                <constraint firstItem="nke-nb-KCu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZMS-9U-2Q9"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="leading" secondItem="FFZ-Na-Hda" secondAttribute="trailing" constant="15" id="Zgw-IK-6A2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="34Y-V0-Qlq" secondAttribute="trailing" constant="20" id="bKg-A7-nKS"/>
                 <constraint firstItem="34Y-V0-Qlq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.05" id="bRs-b2-xQa"/>
@@ -100,11 +102,12 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9d0-eT-m3s" secondAttribute="trailing" constant="20" id="j66-PW-Zo3"/>
                 <constraint firstItem="FFZ-Na-Hda" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jnX-5v-sIA"/>
                 <constraint firstItem="dAm-g2-aLr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="mWM-Lm-J3t"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mhy-ds-YCq" secondAttribute="trailing" constant="20" id="myH-4k-vGB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Z6-yB-lWu" secondAttribute="trailing" constant="20" id="pPe-ue-8Cn"/>
                 <constraint firstItem="dSg-7d-n8U" firstAttribute="bottom" secondItem="34Y-V0-Qlq" secondAttribute="bottom" id="tXx-MV-W5y"/>
                 <constraint firstItem="dAm-g2-aLr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.28" id="thP-lf-4u6"/>
                 <constraint firstItem="dAm-g2-aLr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="u7x-Dn-Kwi"/>
-                <constraint firstItem="8Z6-yB-lWu" firstAttribute="top" secondItem="nke-nb-KCu" secondAttribute="bottom" constant="15" id="xKB-gN-GCk"/>
+                <constraint firstItem="mhy-ds-YCq" firstAttribute="top" secondItem="9d0-eT-m3s" secondAttribute="bottom" constant="8" id="uiw-zK-y5M"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-25.362318840579711" y="97.767857142857139"/>
@@ -113,9 +116,6 @@
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="lasagna" width="2000" height="1500"/>
-        <namedColor name="secondary">
-            <color red="1" green="0.65499997138977051" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="secondary_dark">
             <color red="0.77999997138977051" green="0.47099998593330383" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

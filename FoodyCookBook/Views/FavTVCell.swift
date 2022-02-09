@@ -17,7 +17,7 @@ class FavTVCell: UITableViewCell {
     var FoodItem = Food()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        txtView_fullRecipe.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

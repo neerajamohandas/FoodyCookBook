@@ -42,7 +42,7 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         let food = favourites?[indexPath.row]
         cell.FoodItem = food!
         cell.lbl_name.text = food?.name
-        cell.txtView_recipeLink.text = "Read Recipe:- " + food!.recipeLink 
+        cell.txtView_recipeLink.text = "Watch video:- " + food!.videoLink
         cell.txtView_fullRecipe.text = food?.instructions
         cell.imgView_fav.tintColor = UIColor.red
         

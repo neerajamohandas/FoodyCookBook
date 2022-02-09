@@ -14,11 +14,11 @@ class FoodContentView: UIView {
     @IBOutlet var foodImage: UIImageView!
     @IBOutlet var lbl_foodName: UILabel!
     @IBOutlet var txtView_RecipeLink: UITextView!
-    @IBOutlet var btn_watchVideo: UIButton!
     @IBOutlet var txtView_fullRecipe: UITextView!
     @IBOutlet var imgView_Fav: UIImageView!
     @IBOutlet var btn_Fav: UIButton!
     
+    @IBOutlet var txtView_video: UITextView!
     var view_content: UIView!
     var FoodItem = Food()
     var btnFavTapped = false
@@ -52,8 +52,9 @@ class FoodContentView: UIView {
             self.view_content.layer.cornerRadius = 10
             self.foodImage.layer.cornerRadius = 10
             self.lbl_foodName.text = self.FoodItem.name
-            self.txtView_RecipeLink.text = "Recipe Source: " + self.FoodItem.recipeLink
+            self.txtView_RecipeLink.text = "Recipe Source:-  " + self.FoodItem.recipeLink
             self.txtView_fullRecipe.text = self.FoodItem.instructions
+            self.txtView_video.text = "Watch video:-  " + self.FoodItem.videoLink
             self.imgView_Fav.tintColor = UIColor.gray
             self.addSubview(self.view_content)
         }
@@ -81,9 +82,6 @@ class FoodContentView: UIView {
             if status { imgView_Fav.tintColor = UIColor.gray }
         }
     }
-    @IBAction func btnWatchVideo_Tapped(_ sender: Any) {
-    }
-    
     
     
     

@@ -44,6 +44,7 @@ extension SearchVC: UISearchBarDelegate {
                     for i in 0...(foods.count - 1) {
                         self.results.append(foods[i] as! Food)
                     }
+                    print(self.results.count)
                 }
             }else {
                 print("No item found")
