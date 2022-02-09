@@ -27,6 +27,12 @@ class SearchVC: UIViewController {
         tableView_Search.register(UINib(nibName: "FavTVCell", bundle: nil), forCellReuseIdentifier: "FavTVCell")
         tableView_Search.estimatedRowHeight = 700
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.results = [Food]()
+        serachBar.text = ""
+        self.tableView_Search.reloadData()
+    }
 
 }
 
@@ -35,15 +41,19 @@ extension SearchVC: UISearchBarDelegate {
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
      
     }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.results = [Food]()
+        self.tableView_Search.reloadData()
+    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        if let text = searchBar.text {
+        if let text = searchBar.text, text != "" {
         let api = Constants.API.searchFood.rawValue + text
         NetworkService.shared.getDataFromServer(url: api) { _data, _error in
             if _error == nil {
                 if let data = _data {
-                    let foods = data.value(forKey: "meals") as! NSArray
+                    if let foods = data.value(forKey: "meals") as? NSArray {
                     for i in 0...(foods.count - 1) {
                         let foodDict =  foods[i] as! NSDictionary
                         let foodItem = Food()
@@ -61,9 +71,14 @@ extension SearchVC: UISearchBarDelegate {
                         foodItem.recipeLink = image
                         self.results.append(foodItem)
                     }
+                    }
                     print(self.results.count)
                     DispatchQueue.main.async {
+                     if self.results.count == 0 {
+                        self.showAlert()
+                     }else{
                         self.tableView_Search.reloadData()
+                    }
                     }
                 }
             }else {
@@ -94,5 +109,11 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    private func showAlert(){
+        let alertVC = UIAlertController(title: "", message: "No food item found !", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: { action in
+            self.serachBar.text = ""
+        }))
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }
