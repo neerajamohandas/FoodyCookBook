@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="629" height="850"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lasagna" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-g2-aLr">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-g2-aLr">
                     <rect key="frame" x="2" y="2" width="625" height="238"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
@@ -115,7 +115,6 @@
     </objects>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
-        <image name="lasagna" width="2000" height="1500"/>
         <namedColor name="secondary_dark">
             <color red="0.77999997138977051" green="0.47099998593330383" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

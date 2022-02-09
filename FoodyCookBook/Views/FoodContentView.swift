@@ -56,6 +56,11 @@ class FoodContentView: UIView {
             self.txtView_fullRecipe.text = self.FoodItem.instructions
             self.txtView_video.text = "Watch video:-  " + self.FoodItem.videoLink
             self.imgView_Fav.tintColor = UIColor.gray
+            if self.FoodItem.thumbImage != "" {
+                if let url = URL(string: self.FoodItem.thumbImage){
+                    self.downloadImage(from: url)
+                }
+            }
             self.addSubview(self.view_content)
         }
     }
@@ -105,5 +110,21 @@ class FoodContentView: UIView {
             self.FoodItem.thumbImage = thumb[0] as! String
             self.nibSetup()
         }
+    }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            // always update the UI from the main thread
+            DispatchQueue.main.async() { [weak self] in
+                self?.foodImage.image = UIImage(data: data)
+            }
+        }
+    }
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }
