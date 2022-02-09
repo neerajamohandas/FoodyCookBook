@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-k8-mX0">
-                        <rect key="frame" x="0.0" y="0.0" width="363" height="452"/>
+                        <rect key="frame" x="5" y="5" width="353" height="442"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-pm-T8S">
-                                <rect key="frame" x="8" y="15" width="309.5" height="27.5"/>
+                                <rect key="frame" x="8" y="15" width="300" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <color key="textColor" name="secondary_dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Recipe Link" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-Kg-IEa">
-                                <rect key="frame" x="8" y="50.5" width="347" height="36.5"/>
+                                <rect key="frame" x="8" y="50.5" width="337" height="36.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" name="secondary_dark"/>
                                 <color key="textColor" name="textOn_secondary"/>
@@ -37,7 +37,7 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIi-PJ-vxH">
-                                <rect key="frame" x="332.5" y="16.5" width="22.5" height="20"/>
+                                <rect key="frame" x="323" y="16.5" width="22" height="19.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="primary_light"/>
                                 <constraints>
@@ -45,7 +45,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-zH-fvv">
-                                <rect key="frame" x="332.5" y="15" width="22.5" height="22.5"/>
+                                <rect key="frame" x="323" y="15" width="22" height="22"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kav-qX-9Ok">
-                                <rect key="frame" x="8" y="102" width="347" height="342"/>
+                                <rect key="frame" x="8" y="102" width="337" height="332"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" name="textOn_secondary"/>
@@ -84,10 +84,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="lfo-k8-mX0" secondAttribute="trailing" id="PNE-NT-Sy0"/>
-                    <constraint firstAttribute="bottom" secondItem="lfo-k8-mX0" secondAttribute="bottom" id="aw9-LG-Tjv"/>
-                    <constraint firstItem="lfo-k8-mX0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rv4-JS-mJB"/>
-                    <constraint firstItem="lfo-k8-mX0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="t67-w4-VAb"/>
+                    <constraint firstAttribute="trailing" secondItem="lfo-k8-mX0" secondAttribute="trailing" constant="5" id="PNE-NT-Sy0"/>
+                    <constraint firstAttribute="bottom" secondItem="lfo-k8-mX0" secondAttribute="bottom" constant="5" id="aw9-LG-Tjv"/>
+                    <constraint firstItem="lfo-k8-mX0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="rv4-JS-mJB"/>
+                    <constraint firstItem="lfo-k8-mX0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="t67-w4-VAb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -97,6 +97,7 @@
                 <outlet property="lbl_name" destination="fo1-pm-T8S" id="Hxv-rW-f3t"/>
                 <outlet property="txtView_fullRecipe" destination="kav-qX-9Ok" id="7iA-sP-prM"/>
                 <outlet property="txtView_recipeLink" destination="Vdt-Kg-IEa" id="0wz-4a-Ule"/>
+                <outlet property="view_Shadow" destination="lfo-k8-mX0" id="FRB-Ny-qeL"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="109.15178571428571"/>
         </tableViewCell>

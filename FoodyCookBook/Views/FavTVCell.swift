@@ -13,11 +13,18 @@ class FavTVCell: UITableViewCell {
     @IBOutlet var txtView_fullRecipe: UITextView!
     @IBOutlet var imgView_fav: UIImageView!
     
+    @IBOutlet var view_Shadow: UIView!
     var tableViewRef: UITableView!
     var FoodItem = Food()
     override func awakeFromNib() {
         super.awakeFromNib()
         txtView_fullRecipe.sizeToFit()
+        view_Shadow.layer.shadowColor = UIColor(named: "secondary_dark")?.cgColor
+        view_Shadow.layer.shadowRadius = 4
+        view_Shadow.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view_Shadow.layer.shadowOpacity = 0.5
+        view_Shadow.layer.masksToBounds = false
+        view_Shadow.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
