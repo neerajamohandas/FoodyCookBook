@@ -29,13 +29,13 @@
                     <rect key="frame" x="2" y="2" width="625" height="238"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFZ-Na-Hda">
-                    <rect key="frame" x="20" y="248" width="549" height="33"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                    <rect key="frame" x="20" y="248" width="549" height="27.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                     <color key="textColor" name="secondary_dark"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Recipe Link:" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-eT-m3s">
-                    <rect key="frame" x="15" y="296" width="594" height="41"/>
+                    <rect key="frame" x="15" y="290.5" width="594" height="41"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="tintColor" name="secondary_dark"/>
                     <color key="textColor" name="textOn_secondary"/>
@@ -44,7 +44,7 @@
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhy-ds-YCq">
-                    <rect key="frame" x="20" y="345" width="589" height="50"/>
+                    <rect key="frame" x="15" y="339.5" width="594" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="tintColor" name="secondary_dark"/>
                     <constraints>
@@ -57,7 +57,7 @@
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-yB-lWu">
-                    <rect key="frame" x="15" y="403" width="594" height="432"/>
+                    <rect key="frame" x="15" y="397.5" width="594" height="437.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" name="textOn_secondary"/>
@@ -85,7 +85,7 @@
             <color key="backgroundColor" name="textOn_primary"/>
             <constraints>
                 <constraint firstItem="FFZ-Na-Hda" firstAttribute="top" secondItem="dAm-g2-aLr" secondAttribute="bottom" constant="8" id="1Ue-r3-aYv"/>
-                <constraint firstItem="mhy-ds-YCq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="5V5-Nh-tMf"/>
+                <constraint firstItem="mhy-ds-YCq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="5V5-Nh-tMf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dAm-g2-aLr" secondAttribute="trailing" constant="2" id="BTn-9P-S70"/>
                 <constraint firstItem="8Z6-yB-lWu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Cgo-HZ-37r"/>
                 <constraint firstItem="9d0-eT-m3s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Etn-Yi-iyS"/>

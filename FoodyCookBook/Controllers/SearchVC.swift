@@ -62,7 +62,7 @@ extension SearchVC: UISearchBarDelegate {
                                 let source = foodDict.value(forKey: "strSource") as? String ?? ""
                                 foodItem.recipeLink = source
                                 let video = foodDict.value(forKey: "strYoutube") as? String ?? ""
-                                foodItem.recipeLink = video
+                                foodItem.videoLink = video
                                 let image = foodDict.value(forKey: "strMealThumb") as? String ?? ""
                                 foodItem.recipeLink = image
                                 self.results.append(foodItem)
